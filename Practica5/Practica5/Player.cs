@@ -4,7 +4,7 @@ namespace Game
 {
     public class Player
     {
-        /// <summary>
+       /* /// <summary>
         /// Player position
         /// </summary>
         int row, col;
@@ -81,6 +81,6 @@ namespace Game
         public bool GoalReached(Board aBoard)
         {
 
-        }      
+        }     */ 
     }
 }

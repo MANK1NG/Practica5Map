@@ -48,7 +48,31 @@ namespace Game
         /// <param name="maxItems">Max number of items contained in the board.</param>
         public Board(int r, int c, string textMap, int maxItems)
         {
+            // Establecer el número de filas y columnas del tablero
+            ROWS = r; 
+            COLS = c;
+            // Inicializar la matriz que representa el tablero y el arreglo de ítems
+            map = new char[ROWS, COLS];
+            itemsInBoard = new Item[maxItems];
+            numItemsInBoard = 0;
 
+            // Recorrer la cadena de texto que representa el mapa
+            for (int i = 0; i < textMap.Length; i++)
+            {
+                // Calcular la fila y columna actual en base al índice
+                int row = i / COLS;
+                int col = i % COLS;
+
+                // Asignar el carácter actual al mapa en la posición correspondiente
+                map[row, col] = textMap[i];
+                
+                // Si el carácter actual es 'i', agregar un ítem en esa posición
+                if (textMap[i] == 'i')
+                {
+                    // Agregar un ítem en la posición actual con valor 0
+                    AddItem(row, col, 0); 
+                }
+            }
         }
 
         /// <summary>
@@ -60,7 +84,7 @@ namespace Game
         /// <param name="c">column</param>
         public bool IsWallAt(int r, int c)
         {
-
+            
         }
 
         /// <summary>
@@ -71,7 +95,20 @@ namespace Game
         /// <param name="c">column</param>
         public bool ContainsItem(int r, int c)
         {
+            ///REVISAR
+            if (r < 0 || r >= ROWS || c < 0 || c >= COLS)
+            {
+                return false; 
+            }
 
+            /*foreach (var item in itemsInBoard)
+            {
+                if (item.row == r && item.col == c)
+                {
+                    return true;
+                }
+            }
+            return false;*/
         }
 
         /// <summary>
@@ -86,6 +123,17 @@ namespace Game
         public bool AddItem(int r, int c, int value)
         {
 
+            // Verificar si la posición está dentro de los límites del tablero, no es una pared o no contiene un ítem
+            if (r < 0 || r >= ROWS || c < 0 || c >= COLS || IsWallAt(r, c) || ContainsItem(r, c))
+            {
+                return false; 
+            }
+            // Agregar el ítem  y actualizar el tablero
+            itemsInBoard[numItemsInBoard] = new Item { row = r, col = c, value = value };
+            numItemsInBoard++;
+
+            map[r, c] = 'i'; 
+            return true;
         }
 
 
@@ -98,10 +146,10 @@ namespace Game
         /// </returns>
         /// <param name="r">Row</param>
         /// <param name="c">Column</param>
-        public int PickItem(int r, int c)
+       /* public int PickItem(int r, int c)
         {
 
-        }
+        }*/
 
 
         /// <summary>
@@ -110,20 +158,20 @@ namespace Game
         /// <returns><c>true</c> if the position is a goal, <c>false</c> otherwise</returns>
         /// <param name="row">Row</param>
         /// <param name="col">Column</param>
-        public bool IsGoalAt(int row, int col)
+       /* public bool IsGoalAt(int row, int col)
         {
 
-        }
+        }*/
 
         /// <summary>
         /// Gets the i-th item in the itemsInBoard array. It throws an exception if the item does not exist.
         /// </summary>
         /// <returns>The item</returns>
         /// <param name="i">The index in the itemsInBoard array</param>
-        public Item GetItem(int i)
+       /* public Item GetItem(int i)
         {
 
-        }
+        }*/
 
     }
 }

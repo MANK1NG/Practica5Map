@@ -1,0 +1,7 @@
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\obj\Debug\Practica5.csproj.AssemblyReference.cache
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\obj\Debug\Practica5.csproj.CoreCompileInputs.cache
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\bin\Debug\Practica5.exe.config
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\bin\Debug\Practica5.exe
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\bin\Debug\Practica5.pdb
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\obj\Debug\Practica5.exe
+C:\Users\ivani\OneDrive\Documentos\GitHub\Practica5Map\Practica5\Practica5\obj\Debug\Practica5.pdb
