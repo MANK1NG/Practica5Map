@@ -1,5 +1,4 @@
 ﻿using System;
-using Listas;
 namespace Game
 {
     public enum Direction {North, East, South, West};
@@ -39,14 +38,28 @@ namespace Game
         /// </summary>
         int numItemsInBoard;
 
-        /// <summary>
-        /// Creates a new board. 
-        /// </summary>
-        /// <param name="r">Number of rows</param>
-        /// <param name="c">Number of columns</param>
-        /// <param name="textMap">String of size r*c that represents the map (walls, goals and empty spaces)</param>
-        /// <param name="maxItems">Max number of items contained in the board.</param>
-        public Board(int r, int c, string textMap, int maxItems)
+
+        public void PrintBoard()
+        {
+            for (int i = 0; i < ROWS; i++)
+            {
+                for (int j = 0; j < COLS; j++)
+                {
+                    Console.Write(map[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    
+
+    /// <summary>
+    /// Creates a new board. 
+    /// </summary>
+    /// <param name="r">Number of rows</param>
+    /// <param name="c">Number of columns</param>
+    /// <param name="textMap">String of size r*c that represents the map (walls, goals and empty spaces)</param>
+    /// <param name="maxItems">Max number of items contained in the board.</param>
+    public Board(int r, int c, string textMap, int maxItems)
         {
             // Establecer el número de filas y columnas del tablero
             ROWS = r; 
@@ -84,7 +97,13 @@ namespace Game
         /// <param name="c">column</param>
         public bool IsWallAt(int r, int c)
         {
-            
+            // Verificar si la posición está dentro de los límites del tablero y si es una pared
+            if (r < 0 || r >= ROWS || c < 0 || c >= COLS)
+            {
+                return true; // Fuera de los límites del tablero, considerado como una pared
+            }
+            // Verificar si el carácter en la posición es una pared
+            return map[r, c] == 'w';
         }
 
         /// <summary>
@@ -101,14 +120,7 @@ namespace Game
                 return false; 
             }
 
-            /*foreach (var item in itemsInBoard)
-            {
-                if (item.row == r && item.col == c)
-                {
-                    return true;
-                }
-            }
-            return false;*/
+            return map[r, c] == 'i';
         }
 
         /// <summary>
@@ -128,6 +140,11 @@ namespace Game
             {
                 return false; 
             }
+            // Verificar si se excede el número máximo de ítems
+            if (numItemsInBoard >= itemsInBoard.Length)
+            {
+                throw new Exception("Maximum number of items exceeded."); // Lanzar una excepción si se excede el número máximo de ítems
+            }
             // Agregar el ítem  y actualizar el tablero
             itemsInBoard[numItemsInBoard] = new Item { row = r, col = c, value = value };
             numItemsInBoard++;
@@ -146,10 +163,20 @@ namespace Game
         /// </returns>
         /// <param name="r">Row</param>
         /// <param name="c">Column</param>
-       /* public int PickItem(int r, int c)
+        public int PickItem(int r, int c)
         {
-
-        }*/
+            // Verificar si hay un ítem en la posición especificada
+            for (int i = 0; i < numItemsInBoard; i++)
+            {
+                if (itemsInBoard[i].row == r && itemsInBoard[i].col == c)
+                {
+                    // Si hay un ítem en la posición especificada, devolver su índice en el arreglo itemsInBoard
+                    return i;
+                }
+            }
+            // Si no hay ningún ítem en la posición especificada, devolver -1
+            return -1;
+        }
 
 
         /// <summary>
@@ -158,20 +185,28 @@ namespace Game
         /// <returns><c>true</c> if the position is a goal, <c>false</c> otherwise</returns>
         /// <param name="row">Row</param>
         /// <param name="col">Column</param>
-       /* public bool IsGoalAt(int row, int col)
+         public bool IsGoalAt(int row, int col)
         {
-
-        }*/
+            // Verificar si el carácter en la posición especificada es una meta
+            return map[row, col] == 'g';
+        }
 
         /// <summary>
         /// Gets the i-th item in the itemsInBoard array. It throws an exception if the item does not exist.
         /// </summary>
         /// <returns>The item</returns>
         /// <param name="i">The index in the itemsInBoard array</param>
-       /* public Item GetItem(int i)
+        public Item GetItem(int i)
         {
-
-        }*/
-
+            // Verificar si el índice está dentro de los límites del arreglo itemsInBoard
+            if (i < 0 || i >= numItemsInBoard)
+            {
+                throw new IndexOutOfRangeException("Item index out of range."); // Lanzar una excepción si el índice está fuera de rango
+            }
+            // Devolver el ítem en la posición especificada
+            return itemsInBoard[i];
+        }
+       
     }
 }
+
