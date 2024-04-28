@@ -26,7 +26,7 @@ namespace Game
         /// <summary>
         /// Number of rows and cols of the map
         /// </summary>
-        int ROWS, COLS;
+        public int ROWS, COLS;
 
         /// <summary>
         /// Array with the items contained in this board
@@ -36,7 +36,7 @@ namespace Game
         /// <summary>
         /// The number items in this board.
         /// </summary>
-        int numItemsInBoard;
+        public int numItemsInBoard;
 
 
         public void PrintBoard()

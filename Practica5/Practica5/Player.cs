@@ -1,30 +1,34 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.Data;
 using Listas;
 namespace Game
 {
     public class Player
     {
-       /* /// <summary>
+        /// <summary>
         /// Player position
         /// </summary>
-        int row, col;
+        public int row, col;
 
         /// <summary>
         /// A bag containing the items collected
         /// </summary>
-        Lista bag;
+        public Lista bag;
 
         /// <summary>
         /// The number collected items in the bag.
         /// </summary>
-        int numCollectedItems;
+        public int numCollectedItems;
 
         /// <summary>
         /// The player starts at 0,0 and with an empty bag
         /// </summary>
         public Player()
         {
-
+            row = 0;
+            col = 0;
+            bag = new Lista();
         }
 
         /// <summary>
@@ -36,6 +40,32 @@ namespace Game
         /// <param name="dir">Movement direction</param>
         public bool CanMoveInDirection(Board aBoard, Direction dir)
         {
+            if (dir == Direction.North)
+            {
+                row--;
+            }
+
+            else if (dir == Direction.South)
+            {
+                row++;
+            }
+
+            else if (dir == Direction.West)
+            {
+                col--;
+            }
+
+            else if (dir == Direction.East)
+            {
+                col++;
+            }
+
+            if (!aBoard.IsWallAt(row,col))
+            {
+                return true;
+            }
+
+            else { return false; }
 
         }
 
@@ -49,7 +79,32 @@ namespace Game
         /// <param name="dir">Movement direction</param>
         public bool Move(Board aBoard, Direction dir)
         {
+            if (dir == Direction.North)
+            {
+                row--;
+            }
 
+            else if (dir == Direction.South)
+            {
+                row++;
+            }
+
+            else if (dir == Direction.West)
+            {
+                col--;
+            }
+
+            else if (dir == Direction.East)
+            {
+                col++;
+            }
+
+            if (!aBoard.IsWallAt(row,col))
+            {
+                return true;
+            }
+            else return false;
+           
         }
 
         /// <summary>
@@ -60,7 +115,12 @@ namespace Game
         /// <param name="aBoard">The board where the player is moving</param>
         public bool PickItem (Board aBoard)
         {
-
+            if (aBoard.ContainsItem(row,col))
+            {
+                numCollectedItems++;
+                return true;
+            }
+            else { return false; }
         }
 
         /// <summary>
@@ -70,7 +130,7 @@ namespace Game
         /// <param name="aBoard">The board where the player is moving.</param>
         public int InventoryValue(Board aBoard)
         {
-
+            return numCollectedItems;
         }
 
         /// <summary>
@@ -80,7 +140,8 @@ namespace Game
         /// <param name="aBoard">The board where the player is moving.</param>
         public bool GoalReached(Board aBoard)
         {
-
-        }     */ 
+            return aBoard.IsGoalAt(row, col);
+            
+        }     
     }
 }
