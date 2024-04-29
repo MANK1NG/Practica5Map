@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|solutionrelative:practica5\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|c:\\users\\ivani\\onedrive\\documentos\\github\\practica5map\\practica5\\practica5\\lista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\practica5\\lista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|solutionrelative:practica5\\lista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -53,8 +53,7 @@
               "RelativeToolTip": "Practica5\\Lista.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAAcwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:46:39.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T09:46:39.182Z"
             },
             {
               "$type": "Document",
@@ -78,8 +77,7 @@
               "RelativeToolTip": "Practica5\\Player.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAFMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T22:03:49.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T22:03:49.189Z"
             },
             {
               "$type": "Document",
@@ -113,7 +111,7 @@
               "RelativeDocumentMoniker": "Practica5\\Board.cs",
               "ToolTip": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Practica5\\Board.cs",
               "RelativeToolTip": "Practica5\\Board.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAA4wJIAAAANAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAcwJIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T21:32:26.539Z",
               "EditorCaption": ""
@@ -128,8 +126,7 @@
               "RelativeToolTip": "Practica5\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T21:10:41.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T21:10:41.861Z"
             },
             {
               "$type": "Document",
