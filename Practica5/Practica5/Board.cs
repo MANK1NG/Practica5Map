@@ -21,7 +21,7 @@ namespace Game
         /// - i: Item
         /// - g: Goal
         /// </summary>
-        char[,] map;
+        public char[,] map;
 
         /// <summary>
         /// Number of rows and cols of the map
@@ -114,13 +114,23 @@ namespace Game
         /// <param name="c">column</param>
         public bool ContainsItem(int r, int c)
         {
-            ///REVISAR
+            // Verificar si la posición está dentro de los límites del tablero
             if (r < 0 || r >= ROWS || c < 0 || c >= COLS)
             {
-                return false; 
+                return false;
             }
 
-            return map[r, c] == 'i';
+            // Iterar solo sobre los ítems agregados hasta el momento
+            for (int i = 0; i < numItemsInBoard; i++)
+            {
+                if (itemsInBoard[i].row == r && itemsInBoard[i].col == c)
+                {
+                    return true;
+                }
+            }
+
+            // Si no se encontró ningún ítem en la posición especificada, devolver false
+            return false;
         }
 
         /// <summary>
@@ -138,18 +148,22 @@ namespace Game
             // Verificar si la posición está dentro de los límites del tablero, no es una pared o no contiene un ítem
             if (r < 0 || r >= ROWS || c < 0 || c >= COLS || IsWallAt(r, c) || ContainsItem(r, c))
             {
-                return false; 
+                return false;
             }
+
             // Verificar si se excede el número máximo de ítems
-            if (numItemsInBoard >= itemsInBoard.Length)
+            if (numItemsInBoard >= itemsInBoard.Length || numItemsInBoard >= itemsInBoard.Length)
             {
-                throw new Exception("Maximum number of items exceeded."); // Lanzar una excepción si se excede el número máximo de ítems
+                return false; // Devolver false si el número de ítems en el tablero ya alcanzó el límite máximo
             }
-            // Agregar el ítem  y actualizar el tablero
+
+            // Agregar el ítem y actualizar el tablero
             itemsInBoard[numItemsInBoard] = new Item { row = r, col = c, value = value };
+
+            // Incrementar el contador de ítems solo si se agrega exitosamente
             numItemsInBoard++;
 
-            map[r, c] = 'i'; 
+            map[r, c] = 'i';
             return true;
         }
 
