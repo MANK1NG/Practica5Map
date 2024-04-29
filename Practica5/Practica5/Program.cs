@@ -11,7 +11,7 @@ namespace Practica5
     {
         public static void Main(string[] args)
         {
-            // Crear un tablero 3x3 con un texto de ejemplo
+           /* // Crear un tablero 3x3 con un texto de ejemplo
             string textMap = "oooooiooo";
             int rows = 3;
             int cols = 3;
@@ -46,7 +46,7 @@ namespace Practica5
                 
                 player.Move(board, iniDirec);
             }
-            if (player.GoalReached(board)) Console.WriteLine("Meta");
+            if (player.GoalReached(board)) Console.WriteLine("Meta");*/
         }
     }
 }
