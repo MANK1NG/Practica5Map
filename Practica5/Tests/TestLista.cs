@@ -318,5 +318,213 @@ namespace Tests
         ///<summary>
         ///Clase PickItem
         /// </summary>
+        
+        [Test]
+        public void RetornaTrueSiRecojeItem()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "0i0" + "000";
+            int maxItems = 1;
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+            int numItems = 0;
+
+
+            // Assert
+
+            ClassicAssert.AreEqual(numItems, board.PickItem(1,1));
+        }
+
+        [Test]
+        public void RetornaFalseSiItemNoExiste()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "0i0" + "000";
+            int maxItems = 1;
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+
+
+            // Assert
+
+            ClassicAssert.AreEqual(-1, board.PickItem(0, 1));
+        }
+        [Test]
+        public void RetornaFalseSiFueraDeLosLimites()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "0i0" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+
+
+            // Assert
+
+            ClassicAssert.AreEqual(-1, board.PickItem(-10, 10));
+        }
+
+
+        [Test]
+        public void RetornaTrueSiHayItemYFalseSiNoHay()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "iii" + "0i0" + "ii0";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+            
+
+
+            // Assert
+            ClassicAssert.AreEqual(0, board.PickItem(0, 0));
+            ClassicAssert.AreEqual(3, board.PickItem(1, 1));
+            ClassicAssert.AreEqual(4, board.PickItem(2, 0));
+        }
+        ///<summary>
+        ///Clase IsGoalAt
+        /// </summary>
+
+        [Test]
+        public void RetornaTrueSiHayFinal()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "0g0" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+
+
+
+            // Assert
+            ClassicAssert.IsTrue(board.IsGoalAt(1,1));
+            
+        }
+        [Test]
+        public void RetornaFalseSiNoHayFinal()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "0g0" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+
+
+
+            // Assert
+            ClassicAssert.IsFalse(board.IsGoalAt(1, 0));
+
+        }
+
+        [Test]
+        public void RetornaFalseSiFueraDeLosLimite()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "0g0" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+
+
+
+            // Assert
+            ClassicAssert.IsFalse(board.IsGoalAt(-1, 0));
+
+        }
+
+        ///<summary>
+        ///Clase GetItem
+        /// </summary>
+
+        [Test]
+        public void RetornaTrueSiItemObtenidoCorrectamente()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "000" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+            board.AddItem(1, 1, 5); 
+
+
+            // Assert
+            Item item = board.GetItem(0); 
+            ClassicAssert.AreEqual(1, item.row);
+            ClassicAssert.AreEqual(1, item.col);
+            ClassicAssert.AreEqual(5, item.value);
+        }
+
+        [Test]
+        public void RetornaTrueSiUltimoItem()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "000" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+            board.AddItem(1, 1, 5); 
+            board.AddItem(1, 2, 10);
+
+
+            // Assert
+            Item item = board.GetItem(1);
+            ClassicAssert.AreEqual(1, item.row);
+            ClassicAssert.AreEqual(2, item.col);
+            ClassicAssert.AreEqual(10, item.value);
+        }
+
+        [Test]
+        public void RetornaTrueSiEstaOutRange()
+        {
+            // Arrange
+            int rows = 3;
+            int cols = 3;
+            string textMap = "000" + "000" + "000";
+            int maxItems = 5;
+
+
+            // Act
+            Board board = new Board(rows, cols, textMap, maxItems);
+
+
+
+            // Assert
+            ClassicAssert.Throws<IndexOutOfRangeException>(() => board.GetItem(1)); 
+
+        }
     }
 }

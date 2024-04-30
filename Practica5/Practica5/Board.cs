@@ -201,6 +201,10 @@ namespace Game
         /// <param name="col">Column</param>
          public bool IsGoalAt(int row, int col)
         {
+            if (row < 0 || row >= ROWS || col < 0 || col >= COLS || IsWallAt(row, col) || ContainsItem(row, col))
+            {
+                return false;
+            }
             // Verificar si el carácter en la posición especificada es una meta
             return map[row, col] == 'g';
         }

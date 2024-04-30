@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\tests\\testlista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|c:\\users\\ivani\\onedrive\\documentos\\github\\practica5map\\practica5\\tests\\testlista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|solutionrelative:tests\\testlista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|c:\\users\\ivani\\onedrive\\documentos\\github\\practica5map\\practica5\\practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|solutionrelative:practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Tests\\TestLista.cs",
               "ToolTip": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Tests\\TestLista.cs",
               "RelativeToolTip": "Tests\\TestLista.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4BAAAZAAAA",
+              "ViewState": "AQIAAOkBAAAAAAAAAADwvw0CAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T21:17:47.783Z",
               "EditorCaption": ""
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "Practica5\\Board.cs",
               "ToolTip": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Practica5\\Board.cs",
               "RelativeToolTip": "Practica5\\Board.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAApwIgAAAAhAAAA",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAAwI8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T21:32:26.539Z",
               "EditorCaption": ""
