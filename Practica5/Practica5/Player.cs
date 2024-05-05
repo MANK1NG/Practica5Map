@@ -60,7 +60,7 @@ namespace Game
                 col++;
             }
 
-            if (!aBoard.IsWallAt(row,col))
+            if (!aBoard.IsWallAt(row, col))
             {
                 return true;
             }
@@ -79,32 +79,32 @@ namespace Game
         /// <param name="dir">Movement direction</param>
         public bool Move(Board aBoard, Direction dir)
         {
-            if (dir == Direction.North)
+            while (!aBoard.IsWallAt(row, col))
             {
-                row--;
-            }
+                if (dir == Direction.North)
+                {
+                    row--;
+                }
 
-            else if (dir == Direction.South)
-            {
-                row++;
-            }
+                else if (dir == Direction.South)
+                {
+                    row++;
+                }
 
-            else if (dir == Direction.West)
-            {
-                col--;
-            }
+                else if (dir == Direction.West)
+                {
+                    col--;
+                }
 
-            else if (dir == Direction.East)
-            {
-                col++;
-            }
-
-            if (!aBoard.IsWallAt(row,col))
-            {
+                else if (dir == Direction.East)
+                {
+                    col++;
+                }
                 return true;
             }
-            else return false;
-           
+
+            return false;
+
         }
 
         /// <summary>
@@ -113,9 +113,9 @@ namespace Game
         /// </summary>
         /// <returns><c>true</c>, if there is an item in player's position <c>false</c> otherwise.</returns>
         /// <param name="aBoard">The board where the player is moving</param>
-        public bool PickItem (Board aBoard)
+        public bool PickItem(Board aBoard)
         {
-            if (aBoard.ContainsItem(row,col))
+            if (aBoard.ContainsItem(row, col))
             {
                 numCollectedItems++;
                 return true;
@@ -130,6 +130,10 @@ namespace Game
         /// <param name="aBoard">The board where the player is moving.</param>
         public int InventoryValue(Board aBoard)
         {
+            if (aBoard.ContainsItem(row, col))
+            {
+                numCollectedItems++;
+            }
             return numCollectedItems;
         }
 
@@ -141,7 +145,7 @@ namespace Game
         public bool GoalReached(Board aBoard)
         {
             return aBoard.IsGoalAt(row, col);
-            
-        }     
+
+        }
     }
 }
