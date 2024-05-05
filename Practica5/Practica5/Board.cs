@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 namespace Game
 {
     public enum Direction {North, East, South, West};
@@ -224,7 +225,45 @@ namespace Game
             // Devolver el ítem en la posición especificada
             return itemsInBoard[i];
         }
-       
-    }
+
+        /// <summary>
+        /// mirar Bien
+        /// </summary>
+        /// <param name="playerRow"></param>
+        /// <param name="playerCol"></param>
+        /// <param name="direction"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        public void BreakWall(int playerRow, int playerCol, Direction direction)
+        {
+            // Verificar si la posición del jugador está dentro de los límites del tablero
+            if (playerRow < 0 || playerRow >= ROWS || playerCol < 0 || playerCol >= COLS)
+            {
+                throw new ArgumentOutOfRangeException("Player position is out of bounds.");
+            }
+            int column = playerCol;
+            int row = playerRow;
+
+            if(direction == Direction.North)
+            {
+                row--;
+            }else if (direction == Direction.South)
+            {
+                row++;
+            }
+            else if (direction == Direction.East) 
+            {
+                column++;
+            }else if(direction == Direction.West)
+            {
+                column--;
+            }
+
+            if (map[row, column] == 'w')
+            {
+                // Romper la pared cambiando el carácter correspondiente en el mapa a un espacio vacío
+                map[row, column] = '0';
+            }
+        }
+        }
 }
 

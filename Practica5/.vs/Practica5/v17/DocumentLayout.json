@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|solutionrelative:practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\tests\\testboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|solutionrelative:tests\\testboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|c:\\users\\ivani\\onedrive\\documentos\\github\\practica5map\\practica5\\tests\\testplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|solutionrelative:tests\\testplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|c:\\users\\ivani\\onedrive\\documentos\\github\\practica5map\\practica5\\tests\\testboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38E36CBC-7DF6-4B1C-A7A4-6B3C939EE922}|Tests\\Tests.csproj|solutionrelative:tests\\testboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|c:\\users\\ivani\\onedrive\\documentos\\github\\practica5map\\practica5\\practica5\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\practica5\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|solutionrelative:practica5\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ivani\\OneDrive\\Escritorio\\tjnryt\\Practica5\\Tests\\TestLista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|solutionrelative:practica5\\board.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2B542396-8D7C-4AFC-A819-58A526E82561}|Practica5\\Practica5.csproj|C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\practica5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,11 +33,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Practica5\\Player.cs",
               "RelativeDocumentMoniker": "Practica5\\Player.cs",
@@ -45,25 +45,24 @@
               "RelativeToolTip": "Practica5\\Player.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAAAJcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T10:22:32.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-05T10:22:32.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TestPlayer.cs",
               "DocumentMoniker": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Tests\\TestPlayer.cs",
               "RelativeDocumentMoniker": "Tests\\TestPlayer.cs",
               "ToolTip": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Tests\\TestPlayer.cs",
               "RelativeToolTip": "Tests\\TestPlayer.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAsAAAABAAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAAwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-05T10:20:43.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TestLista.cs",
               "DocumentMoniker": "C:\\Users\\ivani\\OneDrive\\Escritorio\\tjnryt\\Practica5\\Tests\\TestLista.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Escritorio\\tjnryt\\Practica5\\Tests\\TestLista.cs",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\Escritorio\\tjnryt\\Practica5\\Tests\\TestLista.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T10:19:51.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-05T10:19:51.691Z"
             },
             {
               "$type": "Document",
@@ -82,22 +80,23 @@
               "RelativeDocumentMoniker": "Tests\\TestBoard.cs",
               "ToolTip": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Tests\\TestBoard.cs",
               "RelativeToolTip": "Tests\\TestBoard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA4AAAA",
+              "ViewState": "AQIAAPcBAAAAAAAAAAAmwBECAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T21:17:47.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Board.cs",
               "DocumentMoniker": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Practica5\\Board.cs",
               "RelativeDocumentMoniker": "Practica5\\Board.cs",
               "ToolTip": "C:\\Users\\ivani\\OneDrive\\Documentos\\GitHub\\Practica5Map\\Practica5\\Practica5\\Board.cs",
               "RelativeToolTip": "Practica5\\Board.cs",
-              "ViewState": "AQIAAMgAAAAAAAAAAAAAwI8AAAAdAAAA",
+              "ViewState": "AQIAAN8AAAAAAAAAAAAcwOUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T21:32:26.539Z"
+              "WhenOpened": "2024-04-23T21:32:26.539Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
