@@ -186,6 +186,7 @@ namespace Game
                 if (itemsInBoard[i].row == r && itemsInBoard[i].col == c)
                 {
                     // Si hay un ítem en la posición especificada, devolver su índice en el arreglo itemsInBoard
+                    map[itemsInBoard[i].row, itemsInBoard[i].col] = '0';
                     return i;
                 }
             }
@@ -264,6 +265,23 @@ namespace Game
                 map[row, column] = '0';
             }
         }
+        public bool SoltarItem(Player player, int i)
+        {
+            if (player.row < 0 || player.row >= ROWS || player.col < 0 || player.col >= COLS)
+            {
+                return false;
+            }
+            if (player.numCollectedItems > 0)
+            {
+                if (itemsInBoard[i].row == player.row && itemsInBoard[i].col == player.col)
+                {
+                    map[player.row, player.col] = 'i';
+                    return true;
+                }
+            }
+            return false;
+
         }
+    }
 }
 

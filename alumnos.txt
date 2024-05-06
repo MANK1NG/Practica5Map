@@ -1,2 +1,2 @@
-IvánPalominoRodríguez
-BlancaNavajasGonzález
+IvánPalominoRodríguez - Clase Board - Opcional BreakBreak
+BlancaNavajasGonzález - Clase Player - Opcional SoltarItem
